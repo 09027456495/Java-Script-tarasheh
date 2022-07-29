@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <!-- <button onclick="click1()">show the alert</button> -->
+
+    <!-- <hr /> -->
+
+    <!-- 2 -->
+    <!-- <button onclick="click2()">show the alert</button> -->
+
+    <!-- <hr /> -->
+
+    <!-- 3 -->
+    <!-- <button onclick="click3()">show the alert</button> -->
+
+
+    <hr>
+
+
+    <input type="text" id="text"/> 
+    <input type="number" id="number"/> 
+
+    <button onclick="change()">CHANGE</button>
+    <div class="div1"></div>
+
+
+    <hr>
+
+    <button onclick="change1()">show alert</button>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      // 1
+      //   var UserName1 = "amir";
+      //   function click1() {
+      //     alert(UserName1);
+      //   }
+
+      //   // 2
+      //   var UserName2 = "mohammad";
+      //   function click2() {
+      //     alert(UserName2);
+      //   }
+
+      //   // 3
+      //   var UserName3 = "hassan";
+      //   function click3() {
+      //     alert(UserName3);
+      //   }
+
+      function change() {
+        var first = $("#text").val();
+        var second = $("#number").val()
+        var result = first + ' ' + second
+        
+        $(".div1").html( result );
+      
+
+      }
+
+      var nameU = " amir ";
+      var family = " hasani ";
+      var fulName = nameU + family;
+      function change1() {
+        alert(fulName);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>code is in class</title>
+  </head>
+  <body>
+    <script>
+      var inum = 12; // Number
+      var bBul = true; // Bull
+      var sStr = " 12 Hello 555"; // String
+      // var sStr = "  Hello 555" ;
+      // var sStr = " 123 Hello 555" ;
+      var nNULL = null; // Null / enthing
+      var unDI = undefined; // undefined / don't explane
+
+      console.log(typeof inum, typeof bBul, typeof sStr);
+
+      // toString() تبدیل گر عدد و بولین به استرینگ با گذاشتن اسم متغیر پشتش به علاوه یک دات
+      var convertInum = inum.toString();
+      // الان این تبدیل شده به استرینگ
+      console.log(typeof convertInum);
+      // الان این تبدیل شده به عدد
+      console.log(typeof inum);
+
+      // تبدیل بولین به استرینگ
+      var convertBBul = bBul.toString();
+      console.log(typeof convertBBul);
+      console.log(typeof bBul);
+
+
+
+      // parseFloat() تبدیل گر عدد به عدد های اعشاری
+      var convertStr = parseFloat(sStr);
+      console.log(typeof convertStr);
+      console.log(convertStr);
+
+      // parseInt() تبدیل گر عدد صحیح ما اون متغیری که میخاییم رو باید به عنوان پارمتر داخل پرانتز بزاریم
+      var convertStr2 = parseFloat(sStr);
+      console.log(typeof convertStr2);
+      console.log(convertStr2);
+
+      // Boolean() تبدیل گر بول که فقط صفر و یک میده
+      // هر چیزی که وجود داره درست میده ، و هرچیزی که اصلا نباشه به ما غلط میده
+      //   var convertBULL2 = 0;
+      //   var convertBULL2 = 0123;
+      //   var convertBULL2 = "sallam" ;
+      // var convertBULL2 = null ;
+      var convertBULL2 = undefined;
+      console.log(Boolean(convertBULL2));
+
+      // String() تبدیل گر استرینگ
+      // var convertSTR = false ;
+      // var convertSTR = true ;
+      // var convertSTR = 19 ;
+      // var convertSTR = "hello" ;
+      //   console.log(String(convertSTR));
+
+      // Number() تبدیل گر عدد
+      let STR2 = "23"; // string
+      let BULL2 = true; // boolean // میده یک // اگر هم فالس باشه به ما صفر میده
+
+      let convertSTR2 = Number(STR2);
+      let resultBULL2 = Number(BULL2);
+
+      console.log(convertSTR2); // 23
+      console.log(resultBULL2); // 1
+    </script>
+  </body>
+</html>

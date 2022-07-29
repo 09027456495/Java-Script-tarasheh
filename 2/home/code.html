@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Work</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- start the All HTML Code -->
+    <section class="sec">
+
+
+      <!-- start the after sec -->
+      <main class="main-sec">
+
+        <!-- start the title -->
+        <h1 class="h1-main">فرم ثبت نام آموزشگاه تراشه</h1>
+        <!-- end of title -->
+
+        <!-- start the inputs -->
+        <div class="body-page">
+          <div>
+            <label style="padding: 8px" for="email1">ایمیل</label>
+            <input type="email" id="email1" placeholder="ایمیل" />
+          </div>
+
+          <div>
+            <label style="padding: 8px" for="password1">رمزعبور</label>
+            <input type="password" id="password1" placeholder="رمز عبور" />
+          </div>
+
+          <div>
+            <label style="padding: 8px" for="number1">شماره تماس</label>
+            <input type="number" id="number1" placeholder="شماره تماس" />
+          </div>
+
+        </div>
+        <!--  end of inputs -->
+
+
+        <!-- start the btn send the value -->
+        <div class="btn-page">
+          <button onclick="send()" class="btn">ارسال</button>
+        </div>
+        <!-- end of btn send the value -->
+
+        <!-- start the results -->
+        <div class="results">
+            <h3>مشاهده اطلاعات وارد شده</h3>
+            <div class="result1 rrr">ایمیل : </div>
+            <div class="result2 rrr">رمز عبور : </div>
+            <div class="result3 rrr">شماره تماس : </div>
+        </div>
+        <!-- end of results -->
+
+      </main>
+      <!-- end of after sec -->
+
+    </section>
+    <!-- End of The ALL HTML Code -->
+
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        function send(){
+            var jemail = $("#email1").val();
+            var jpass = $("#password1").val();
+            var jnumber = $("#number1").val();
+      
+            // var result = `$(jemail) $(jpass) $(jnumber)`
+            // var result = jemail + ' ' + jpass + ' ' + jnumber ;
+            // $(".result1").html( result );
+          
+            $('.result1').append( jemail );
+            // $('.result1').append( $("#email1").val() );
+
+            $('.result2').append( jpass );
+
+            $('.result3').append( jnumber );
+
+        }
+      // مجار (major)
+      // https://learnparsi.com/%D9%85%D8%AA%D8%BA%DB%8C%D8%B1%D9%87%D8%A7-%D9%88-%D8%A7%D9%86%D9%88%D8%A7%D8%B9-%D8%AF%D8%A7%D8%AF%D9%87-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%AC%D8%A7%D9%88%D8%A7-%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/
+    </script>
+
+
+  </body>
+</html>

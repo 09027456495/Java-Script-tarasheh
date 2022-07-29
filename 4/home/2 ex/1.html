@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item">list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+    </ul>
+
+    
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        function change(){
+            $("li.third-item").nextAll().addBack()
+            .css("background-color", "red");
+        }
+      
+    </script>
+</body>
+
+</html>

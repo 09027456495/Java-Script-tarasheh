@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQoary</title>
+    <style>
+      .div1 {
+        background-color: red;
+      }
+
+      .div2 {
+        background-color: seagreen;
+      }
+
+      .div3 {
+          /* background-color: royalblue; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Qustions -->
+    <!--  برای ای دی چی باید بزنیم ؟ -->
+    <!-- /* #div1{background-color: red;} */ -->
+    <!-- <div id="div1">Hi Im Amir</div> -->
+    <!-- // $('#div1').removeId('div1') -->
+    <!-- End of Qustions -->
+
+    <!-- چطوری کلمات یا جملاتی که در اچ تی ال هستند را عوض کنیم؟ -->
+
+    <!-- متدی وجود داره که به خود المنت اشاره کنه؟
+     -->
+
+    <section class="sec1">
+      <div class="div1">Hi Im Amir</div>
+      <!-- <div class="div1">
+        <a>1</a>
+        <a>2</a>
+        <a>3</a>
+      </div> -->
+      <div class="div2">Hi Im Amir</div>
+      <div class="div3">Hi Im Amir</div>
+
+      <br>
+
+      <input type="text" >
+
+      <br>
+
+      <img src="./1.png" alt="img1" title="img2">
+
+      <br>
+
+      <a href="https://www.tarasheha.ir/"><span>Main Page</span></a>
+
+      <br>
+
+      <button onclick="change()">CHANGE</button>
+    </section>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      function change() {
+        // this method we use for remove class
+        // $('.div1').removeClass('div1')
+
+
+        // this method we use for add class
+        // $('.div1').removeClass('div1').addClass('div2')
+
+        // Toggle sead , use the div1 and toggle the div2
+        // alike instgram's like
+        // $('.div1').toggleClass('div2')
+
+        // this is for children for parant
+        // $('.div1').children().addClass('div2')
+
+        // this is for selector's parent
+        // $('.div1').parent().addClass('div3')
+
+        // after div1 play the code
+        // $('.div1').next().toggleClass('div2')
+
+        // after All div1 play the cide
+        // $('.div1').nextAll().toggleClass('div2')
+
+        // before div2 play the code
+        // $('.div2').prev().removeClass('div1')
+
+        // before All div2 play the code
+        // $('.div2').prevAll().removeClass('div1')
+
+        // 
+
+        // value goes to the div1
+        // $('.div1').html($('input').val())
+
+        // add the value's before
+        // $('.div1').append($('input').val())
+
+        $('.div1').attr('title','Hello').attr('alt','Hello').html($('input').val())
+
+        // change the img , title and alt
+        // $('img').attr('title','img2').attr('alt','img2').attr('src','./2.png')
+
+        // change the href on a tag
+        // $('a').attr('title','href2').attr('alt','href2').attr('href','https://www.tarasheha.ir/tarakast/')
+
+        // change the input's type . text => checkbox
+        // $('input').attr('type','checkbox')
+
+      
+      }
+    </script>
+  </body>
+</html>
