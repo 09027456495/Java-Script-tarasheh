@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ex 6 in home</title>
+    <style>
+        /* Show the teams is here */
+        .main-div {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            font-weight: 900;
+            padding: 7px;
+            margin: 10px;
+            background-color: rgb(107, 107, 92);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+            border-radius: 7px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.438);
+        }
+
+        .main-div1 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+
+
+        }
+
+        .main-div3 {
+            background-image: linear-gradient(to right, #ebebeb, #888888);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+
+            display: none;
+        }
+
+        .main-div2 {
+            background-image: linear-gradient(to right, #5496F3, #F7F8F7);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+
+
+        }
+
+        .main-div4 {
+            background-image: linear-gradient(to right, #587fd3, #2a2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+
+            display: none;
+        }
+
+        .main-div button {
+            padding: 14px;
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: bold;
+            font-size: medium;
+            background-color: #c7c8ca70;
+            color: #ebebeb;
+            border: none;
+        }
+
+        /* End of show the teams */
+
+
+
+
+
+        /* Start Show the Numbers */
+
+        .main-div-num {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            font-weight: 900;
+            padding: 7px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.479);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: left;
+            border-radius: 7px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.438);
+            color: #F7F8F7;
+        }
+
+
+
+        .show-number1 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+        }
+
+        .show-number2 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+        }
+
+        .show-number3 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+        }
+
+        .show-number4 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+        }
+
+        .show-number5 {
+            background-image: linear-gradient(to right, #cf332d, #3f2274);
+            color: azure;
+            padding: 11px;
+            margin: 5px;
+            border-radius: 7px;
+            box-shadow: inset 1px 1px 4px black;
+        }
+
+        .main-div-num button {
+            padding: 14px;
+            margin: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: bold;
+            font-size: medium;
+            background-color: #c7c8ca70;
+            color: #ebebeb;
+            border: none;
+        }
+
+        /* End of show Numbers */
+    </style>
+</head>
+
+<body>
+    <!-- Show the teams is here -->
+    <div class="main-div">
+        <h2 style="color:#ffff">Hello ,Here you can see two taem : a team in LALIGA and a team PRIMER LIGA</h2>
+        <button class="" onclick="teams()">show-teams</button>
+    </div>
+    <div class="show-teams" id="show-teams"></div>
+    <!-- End of show the teams -->
+
+    <br>
+    <hr>
+    <hr>
+    <br>
+
+    <!-- Start Show the Numbers -->
+    <div class="main-div-num">
+        <h2 style="color: #ffff; text-align: center;">And here you can see the operation between ten and nine</h2>
+        <button onclick="numbersMach()">show-number</button>
+    </div>
+    <div class="show-number" id="show-number">
+
+        <div>    
+            <div class="show-number1" id="show-number1">10 + 9 = </div>
+            <div class="show-number2" id="show-number2">10 - 9 = </div>
+            <div class="show-number3" id="show-number3">10 * 9 = </div>
+            <div class="show-number4" id="show-number4">10 / 9 = </div>
+            <div class="show-number5" id="show-number5">10 % 9 = </div>
+        </div>
+
+    </div>
+
+    <!-- End of show Numbers -->
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        // %% Show the teams is here %%
+
+        // here we want use two team in LALIGA and two team in PRIMER LIGA 
+        // here we say , Variable's name whit mojar*
+        function teams() {
+            var aTeams = [[" Barca ", " Real Madrid "], [" Man city ", " Chalsea "]]
+
+            // ***** 1 with the document getElementById by linier *****
+            // document.getElementById('show-teams').innerHTML = "<div class='main-div'> <div class='main-div1'>" + aTeams[0][0] + "</div> <div class='main-div3'>" + aTeams[0][1] + "</div> <div class='main-div2'>" + aTeams[1][0] + "</div> <div class='main-div4'>" + aTeams[1][1] + "</div>  </div>" ;
+
+
+
+            // ***** 2 with document getElementById by backTik *****
+            // document.getElementById("show-teams").innerHTML = `
+
+            // <div class="main-div">
+            //     
+            //     <div class="main-div1">
+            //        ${aTeams[0][0]}
+
+            //     </div>
+
+            //     <div class="main-div3">
+            //        ${aTeams[0][1]}
+            //     </div>
+
+            //     <br>
+
+            //     <div class="main-div2">
+            //         ${aTeams[1][0]}
+            //     </div>
+
+            //     <div class="main-div4">
+            //         ${aTeams[1][1]}
+            //     </div>
+
+            // </div>
+
+            // `
+
+
+
+
+            // ***** 3 with jQuary by backTik *****
+            // $('.show-teams').toggle().html(`
+
+            // <div class="main-div">
+
+            //     <div class="main-div1">
+            //        ${aTeams[0][0]}
+
+            //     </div>
+
+            //     <div class="main-div3">
+            //        ${aTeams[0][1]}
+            //     </div>
+
+
+
+            //     <br>
+
+
+            //     <div class="main-div2">
+            //         ${aTeams[1][0]}
+            //     </div>
+
+            //     <div class="main-div4">
+            //         ${aTeams[1][1]}
+            //     </div>
+
+            // </div>
+
+            //     `
+            // );
+
+
+            // ***** 4 with jQuary by linier *****
+            $('.show-teams').toggle().html("<div class='main-div'> <div class='main-div1'>" + aTeams[0][0] + "</div> <div class='main-div3'>" + aTeams[0][1] + "</div> <div class='main-div2'>" + aTeams[1][0] + "</div> <div class='main-div4'>" + aTeams[1][1] + "</div>  </div>")
+        }
+
+        // %% End of show the teams %%
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+        // %% Start Show the Numbers %%
+
+        // this var is Golobal
+        var iTen = 10;
+        var iNine = 9;
+
+        function numbersMach() {
+            // this var is local
+            var iResult_number1 = iTen + iNine;
+            var iResult_number2 = iTen - iNine;
+            var iResult_number3 = iTen * iNine;
+            var iResult_number4 = iTen / iNine;
+            var iResult_number5 = iTen % iNine;
+
+
+            // document.getElementById('show-number').innerHTML = iResult_number1; // test*
+            // document.getElementById('show-number').append(iResult_number1) // test*
+           
+            // ***** 1 that is inner all operation *****
+            // $('.show-number').toggle().html(`
+            // <div>
+                
+            //     <div class="show-number1" id="show-number1">
+            //         10 + 9 = ${iResult_number1}
+            //     </div>
+            //     <div class="show-number2" id="show-number2">
+            //         10 - 9 = ${iResult_number2}
+            //     </div>
+            //     <div class="show-number3" id="show-number3">
+            //         10 * 9 = ${iResult_number3}
+            //     </div>
+            //     <div class="show-number4" id="show-number4">
+            //         10 / 9 = ${iResult_number4}
+            //     </div>
+            //     <div class="show-number5" id="show-number5">
+            //         10 % 9 = ${iResult_number5}
+            //     </div>
+                
+            // </div>
+        
+            // `);
+
+
+            // ***** 2 that is append operation *****
+            $('.show-number1').append(iResult_number1);
+            $('.show-number2').append(iResult_number2);
+            $('.show-number3').append(iResult_number3);
+            $('.show-number4').append(iResult_number4);
+            $('.show-number5').append(iResult_number5);
+            console.log(iResult_number1);
+            console.log(iResult_number2);
+            console.log(iResult_number3);
+            console.log(iResult_number4);
+            console.log(iResult_number5);
+            
+        }
+
+
+        // %% End of show Numbers %%
+
+    </script>
+</body>
+
+</html>

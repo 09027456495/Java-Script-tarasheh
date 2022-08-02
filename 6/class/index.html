@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .aqua {
+            background-color: aqua;
+        }
+
+        .wheat {
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="car"></div>
+    <button onclick="change()"> بزن بریم</button>
+
+
+    <hr>
+    <hr>
+
+    <div id="ShowNumbers"></div>
+    <button onclick="machh()"> عدد میخام</button>
+
+    <hr>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+
+        function change() {
+            var cars = [[" samand ", "peykan"],[" BMW ", "Porsh "]];
+            // var cars = new Array([" samand ", "peykan"], [" BMW ", "Porsh "]);
+            document.getElementById('car').innerHTML = "<p class='aqua'>" + cars[0][1] + "</p> <p class='wheat'>" + cars[1][0] + "</p>";
+            console.log(cars);
+
+        }
+
+
+        var ten = 10;
+        var nine = 9;
+        function machh() {
+            var resultNumber1 = ten + nine;
+            // var resultNumber2 = ten - nine;
+            // var resultNumber3 = ten * nine;
+            // var resultNumber4 = ten % nine;
+            console.log(resultNumber1)
+            console.log(typeof(resultNumber1))
+            // console.log(resultNumber2)
+            // console.log(resultNumber3)
+            // console.log(resultNumber4)
+            document.getElementById('ShowNumbers').innerHTML = resultNumber1
+            // document.getElementById('ShowNumbers').innerHTML = resultNumber2
+            // document.getElementById('ShowNumbers').innerHTML = resultNumber3
+            // document.getElementById('ShowNumbers').innerHTML = resultNumber4
+        }
+        // machh()
+
+        // document.getElementById('ShowNumbers').innerHTML =resultNumber2
+        // document.getElementById('ShowNumbers').innerHTML =resultNumber3
+        // document.getElementById('ShowNumbers').innerHTML =resultNumber4
+    </script>
+</body>
+
+</html>
