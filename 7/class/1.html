@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .showIMGS{
+            width: 50%; 
+            height: 70%;
+            margin: 0 auto;
+            /* border:3px solid black; */
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 8px silver;
+        }
+        .showIMGS img{
+            width: 100%; 
+            margin: 0 auto;
+            
+        }
+        .BTNS{
+            display: flex;
+            flex-direction: row;
+            justify-content: center ;
+         align-items: center;
+         margin: 9px;
+        }
+        .BTNS img{
+            width: 170px;
+            margin: 9px;
+        }
+
+        .container{
+            width: 50%;
+            height: 400px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="showIMGS">
+        <img id="showIMGa" src="./عکس/1.jpg" alt="">
+    </div>
+<br>
+    <div class="BTNS">
+        <!-- <img src="./عکس/2.jpg" alt="" onclick="document.getElementById('showIMGa').src = this.src">
+        <img src="./عکس/3 (2).jpg" alt="" onclick="document.getElementById('showIMGa').src = this.src">
+        <img src="./عکس/3.jpg" alt="" onclick="document.getElementById('showIMGa').src = this.src">
+        <img src="./عکس/4.jpg" alt="" onclick="document.getElementById('showIMGa').src = this.src"> -->
+    
+        <!-- <img src="./عکس/2.jpg" alt="" onclick="fnIMG(this.src)">
+        <img src="./عکس/3 (2).jpg" alt="" onclick="fnIMG(this.src)">
+        <img src="./عکس/3.jpg" alt="" onclick="fnIMG(this.src)">
+        <img src="./عکس/4.jpg" alt="" onclick="fnIMG(this.src)"> -->
+    
+        <img src="./عکس/2.jpg" alt="" onclick="newFnIMG(event)">
+        <img src="./عکس/3 (2).jpg" alt="" onclick="newFnIMG(event)">
+        <img src="./عکس/3.jpg" alt="" onclick="newFnIMG(event)">
+        <img src="./عکس/4.jpg" alt="" onclick="newFnIMG(event)">
+    </div>
+
+    <div class="container" onmousemove="test(event)" onmouseover="this.style.backgroundColor = 'aqua'"  onmouseout="this.style.backgroundColor = 'orange'"></div>
+
+    <script>
+        function fnIMG(target){
+            document.getElementById('showIMGa').src = target
+        }
+
+        function newFnIMG(e) {
+            var img = e.target.src;
+            console.log(img)
+            document.getElementById('showIMGa').src = img
+        }
+
+        function test(params) {
+            params.target.innerHTML = "x = " + params.clientX + "x <br/> y = " + params.clientY + "y"
+        }
+    </script>
+</body>
+</html>
