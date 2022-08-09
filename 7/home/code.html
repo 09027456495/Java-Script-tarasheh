@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>simple slider</title>
+    <style>
+        /* start the main img */
+        body {
+            background-image: linear-gradient(to top, #4eb4d3, #62e277);
+            height: 100vh;
+        }
+
+        .main-img-div {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 50%;
+            box-shadow: 1px 1px 9px rgba(48, 47, 47, 0.63);
+            border-radius: 14px;
+           
+            overflow: hidden;
+         
+
+        }
+
+        .Child-img-div {
+            width: 100%;
+            box-shadow: 1px 1px 17px rgba(23, 23, 23, 0.63);
+            transition: all 1s; 
+        }
+        .Child-img-div-Click {
+          
+            transform: scale(1.25);
+            
+         
+        }
+
+        .main-img-div:hover {
+            opacity: .7;
+        }
+
+        .main-img-div img {
+            width: 100%;
+            height: 500px;
+            border-radius: 14px;
+
+
+        }
+
+        /* end of main img */
+
+
+
+        /* start the click item */
+        .click-item-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: 1px 1px 9px rgba(48, 47, 47, 0.63);
+            border-radius: 14px;
+            margin-top: 5px;
+            overflow: hidden;
+
+            cursor: pointer;
+            transition: all 0.5s;
+
+            opacity: 0.9;
+        }
+
+        
+        /* .click-item-div img {
+
+            width: 100%;
+            border-radius: 14px;
+            margin: 7px;
+            box-shadow: 1px 1px 9px rgba(48, 47, 47, 0.63);
+            transition: 0.7s all !important;
+            opacity: .5;
+            cursor: pointer;
+
+        } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* start the way 4 */
+        .slider input[name='slide_switch'] {
+            display: none;
+        }
+
+        .slider img {
+            width: 100%;
+            
+            border-radius: 12px ;
+
+            box-shadow: 1px 1px 5px rgba(62, 62, 62, 0.618);
+        }
+
+        .slider label {
+
+            width: 120px;
+            margin: 18px;
+            border: 1px solid #999;
+
+            float: left;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            opacity: 0.8;
+
+            border-radius: 12px ;
+
+            box-shadow: 1px 1px 5px rgba(62, 62, 62, 0.618);
+        }
+
+
+        .slider input[name='slide_switch']:checked+label {
+            border-color: rgb(55, 55, 55);
+            opacity: 1;
+        }
+
+        /* end of the way 4 */
+
+
+        /* end of click item */
+    </style>
+</head>
+
+<body>
+    <!-- start the main img -->
+    <div class="main-img-div">
+        <div id="Child-img-div" class="Child-img-div">
+            <img id="show-main-img" src="../class/عکس/1.jpg" alt="main img">
+        </div>
+    </div>
+    <!-- end of main img -->
+
+
+    <!-- start the click item -->
+    <div class="click-item-div">
+
+
+
+        <!-- * start the way 1 * -->
+        <!-- in this way we said go to the ducument and find the (show-main-img ID) and give (show-main-img ID)' src = this tag' src -->
+        <!-- <img src="../class/عکس/1.jpg" onclick="document.getElementById('show-main-img').src = this.src" alt="">
+        <img src="../class/عکس/2.jpg" onclick="document.getElementById('show-main-img').src = this.src" alt="">
+        <img src="../class/عکس/3.jpg" onclick="document.getElementById('show-main-img').src = this.src" alt="">
+        <img src="../class/عکس/4.jpg" onclick="document.getElementById('show-main-img').src = this.src" alt=""> -->
+        <!-- end of way 1 -->
+
+
+        <!-- * start the way 2 * -->
+        <!-- <img src="../class/عکس/1.jpg" onclick="fn_show_img(this.src)" alt="">
+        <img src="../class/عکس/2.jpg" onclick="fn_show_img(this.src)" alt="">
+        <img src="../class/عکس/3.jpg" onclick="fn_show_img(this.src)" alt="">
+        <img src="../class/عکس/4.jpg" onclick="fn_show_img(this.src)" alt=""> -->
+        <!-- * end of way 2 * -->
+
+
+        <!-- start the way 3 -->
+        <!-- <img src="../class/عکس/1.jpg" onclick="two_fn_show_img(event)" alt="">
+        <img src="../class/عکس/2.jpg" onclick="two_fn_show_img(event)" alt="">
+        <img src="../class/عکس/3.jpg" onclick="two_fn_show_img(event)" alt="">
+        <img src="../class/عکس/4.jpg" onclick="two_fn_show_img(event)" alt=""> -->
+        <!-- end of way 3 -->
+
+
+        <!-- start the way 4 -->
+        <div class="slider">
+            <input type="radio" name="slide_switch" id="id1">
+            <label for="id1">
+                <img src="../class/عکس/1.jpg" onclick="two_fn_show_img(event)" width="130px" alt="">
+            </label>
+
+
+
+            <input type="radio" name="slide_switch" id="id2">
+            <label for="id2">
+                <img src="../class/عکس/2.jpg" onclick="two_fn_show_img(event)" width="130px" alt="">
+            </label>
+
+
+
+            <input type="radio" name="slide_switch" id="id3">
+            <label for="id3">
+                <img src="../class/عکس/3.jpg" onclick="two_fn_show_img(event)" width="130px" alt="">
+            </label>
+
+
+
+            <input type="radio" name="slide_switch" id="id4">
+            <label for="id4">
+                <img src="../class/عکس/4.jpg" onclick="two_fn_show_img(event)" width="130px" alt="">
+            </label>
+
+            <!-- end of the way 4 -->
+        </div>
+        <!-- end of click item -->
+
+
+
+
+
+
+
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        // * start the way 2 *
+        function fn_show_img(changeIMG) {
+
+            // that is my Object or porototype
+            // console.log(fn_show_img)
+
+            // changeIMG is my parametr , so this parametr is img' src in up , on HTML' tag
+            // console.log(changeIMG)
+
+            // just goes to call this Function
+            // console.log(fn_show_img(changeIMG))
+            // document.getElementById('show-main-img').src = changeIMG;
+            // $('.Child-img-div').toggleClass('Child-img-div-Click')
+        }
+        // * end of way 2 *
+
+        // start the way 3
+        function two_fn_show_img(MyEvent) {
+            // that is my Object or porototype
+            // console.log(two_fn_show_img)
+
+            // that give All information abuot our Event , because in up we said use the this function on event' section
+            console.log(MyEvent)
+            var img = MyEvent.target.src;
+            document.getElementById('show-main-img').src = img
+            $('.Child-img-div').toggleClass('Child-img-div-Click')
+            // document.getElementById('Child-img-div').style.transform.scale(1.25);
+            // document.getElementById('Child-img-div').style.transform="scale(1.25)"
+        }
+        // end of way 3
+    </script>
+</body>
+
+</html>
