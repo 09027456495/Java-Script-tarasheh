@@ -142,6 +142,7 @@ function send_show() {
     sTel = document.getElementById("teli").value;
     sPassword = document.getElementById("password").value;
 
+    var test = [sName, sEmail, sTel, sPassword];
 
     // now we say what is my information
     my_sName = "amir";
@@ -151,6 +152,10 @@ function send_show() {
 
 
     // let's start for our condishens
+
+    array.forEach(element => {
+        
+    });
 
     // when there is no value in inputs
     if (sName == " " && sEmail == " " && sTel == " " && sPassword == " ") {

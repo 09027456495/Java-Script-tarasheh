@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom left, #3fbabe, #000000, #8b3cc6);
+            height: 100vh;
+        }
+
+        #login {
+            width: 500px;
+            height: 600px;
+            background: linear-gradient(to bottom left, #3fbabe, #4a5f5f, #ffffff);
+            position: relative;
+            border-radius: 40px;
+            margin: 50px 500px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        #text {
+            position: absolute;
+            position: absolute;
+            width: 354px;
+            height: 43px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            text-align: center;
+            color: black;
+            margin: 65px;
+        }
+
+        #password {
+            position: absolute;
+            width: 354px;
+            height: 43px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            text-align: center;
+            color: black;
+            margin: 150px 65px;
+        }
+
+        #password2 {
+            position: absolute;
+            width: 354px;
+            height: 43px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            text-align: center;
+            color: black;
+            margin: 235px 65px;
+        }
+
+        #number {
+            position: absolute;
+            width: 354px;
+            height: 43px;
+            border-radius: 20px;
+            border: 2px solid gray;
+            text-align: center;
+            color: black;
+            margin: 322px 65px;
+        }
+
+        #reset {
+            width: 120px;
+            margin: 425px 76px;
+            position: absolute;
+            border-radius: 20px;
+            border: 2px solid gray;
+            height: 40px;
+            transition: 1s;
+        }
+
+        #reset:hover {
+            transition: 1s;
+            background: radial-gradient(#3fbabe, #8b3cc6, #000000);
+            color: white;
+            transform: translate(2px, -2px);
+        }
+
+        #sub {
+            width: 120px;
+            margin: 425px 288px;
+            position: absolute;
+            border-radius: 20px;
+            border: 2px solid gray;
+            height: 40px;
+            transition: 1s;
+        }
+
+        #sub:hover {
+            transform: translate(2px, -2px);
+            transition: 1s;
+            background: radial-gradient(#3fbabe, #8b3cc6, #000000);
+            color: white;
+        }
+
+        #welcome-error {
+            width: 200px;
+            height: 90px;
+            background-color: green;
+            margin: 480px 150px;
+            position: absolute;
+            border-radius: 20px;
+            color: white;
+            display: none;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="login">
+
+        <input type="text" id="text" placeholder="username" value=""  onkeydown=" filter()" >
+
+        <input type="password" id="password" placeholder="password" value="" onkeydown=" filter2(this.value)">
+
+        <input type="password" id="password2" placeholder="repet password">
+
+        <input type="text" name="" id="number" placeholder="number" onkeydown="filter3(event)">
+
+        <input type="reset" id="reset">
+
+        <input type="button" id="sub" value="Login" onclick="myclick()">
+
+        <div id="welcome-error"></div>
+
+    </form>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+
+    <script>
+
+
+    
+
+        function myclick() {
+            document.getElementById('welcome-error').style.display = 'block';
+            document.getElementById('welcome-error').style.backgroundColor = 'green';
+            document.getElementById('welcome-error').innerHTML = 'welcome';
+            setTimeout(() => {
+                document.getElementById('welcome-error').style.display = 'none';
+            }, 2000);
+        }
+
+
+
+        function filter3(e) {
+            console.log(e, e.keyCode );
+        
+            if (e.keyCode > 95 && e.keyCode  < 106 || e.keyCode  == 8) {
+                $('#welcome-error').fadeOut(500);
+               
+            }
+
+            else if(e.keyCode > 47 && e.keyCode  < 59){
+                $('#welcome-error').fadeOut(500)
+               
+                $('#welcome-error').css('background-color', 'green');
+            }
+            else {
+                e.preventDefault();
+                $('#welcome-error').css('background-color', 'red');
+                $('#welcome-error').fadeIn(500).html('لطفا از اعداد استفاده کنید');
+                setTimeout(() => {
+                    $('#welcome-error').fadeOut(500);
+                    
+
+                }, 3000);
+            }
+
+        }
+
+        function filter2() {
+
+        }
+    // function filter2(){
+    //     console.log();
+    //     var valll = this.value;
+    //     if(valll < 6){
+    //         $('#welcome-error').fadeIn(500)
+    //     }
+    // }
+// function filter2(){
+
+// }
+    </script>
+</body>
+
+</html>
