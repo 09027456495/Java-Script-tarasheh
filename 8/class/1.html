@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            width: 200px;
+            padding: 0.3em;
+            background-color: rgb(224, 142, 142);
+            border: 1px solid rgb(224, 21, 21);
+            /* border-radius: 8px; */
+            border-radius: 185px 47px 0 0 / 112px 126px 0 0;
+            box-shadow: 0 4px 12px rgb(199, 66, 66);
+            margin: 1em 0;
+            display: none;
+            text-align: right;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="background-color: red ;">asdasdasd</div>
+    <form action="">
+        <input type="text" onkeydown="filter(event)" />
+        <div class="error">frewsts</div>
+    </form>
+
+    <script src="../../7/class/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function filter(e) {
+            console.log(e, e.keyCode)
+
+            if (e.keyCode > 96 && e.keyCode < 101 || e.keyCode == 8) {
+                $('.error').fadeOut(500)
+            } else {
+                e.preventDefault();
+                $('.error').fadeIn(500).html('کاراکتر ورودی نامعتبر است')
+                
+                setTimeout(() => {
+                    $('.error').fadeOut(500)
+                }, 3000);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

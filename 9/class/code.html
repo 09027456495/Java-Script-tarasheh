@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="text1" onkeyup="see_condition(event)" type="text">
+
+    <div id="see_condition"
+        style="background-color: rgb(54, 54, 165) ; width: 50%; height: 100px; color: rgb(255, 255, 255);"></div>
+    <script>
+        function see_condition(e) {
+
+            console.log(e)
+
+            var images = ['']
+            // var user_name = document.getElementById('text1').value;
+            // switch (user_name) {
+            //     case 'ali':
+            //     case 'hasan':
+            //     case 'hosein':
+            //         document.getElementById('see_condition').innerHTML = `true`
+            //         document.getElementById('see_condition').style.backgroundColor = "green"
+            //         break;
+            //     default:
+            //         document.getElementById('see_condition').innerHTML = 'fail'
+            //         document.getElementById('see_condition').style.backgroundColor = 'red'
+            // }
+            // switch(user_name){
+            //     case 'ali':
+            //     document.getElementById('see_condition').innerHTML = ' ali is good '
+            //     break ;
+
+            //     case 'hasan' : 
+            //     document.getElementById('see_condition').innerHTML = ' hasan is not bad '
+            //     document.getElementById('see_condition').style.backgroundColor = "rgb(54, 165, 60)"
+            //     break ;
+
+            //     case 'mammad' :
+            //         document.getElementById('see_condition').innerHTML = ' mammad is very great '
+            // }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+/* fonts */
+@font-face {
+  font-family: iran;
+  src: url(../fonts/iran.ttf);
+}
+
+@font-face {
+  font-family: ziba;
+  src: url(../fonts/Ziba.ttf);
+}
+
+* {
+  /*چون یک وبسایت فارسی هستیم و باید راست چین باشه */
+  direction: rtl;
+  font-family: iran;
+
+  /*یا بردر بدیم */
+  /*باعث میشه که مثلا وقتی به یک چیز مارجین یا پدیننیگ بدیم انجام نشه و مثلا ویت و هیت عکس وووو غیره*/
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 10px;
+    margin: 0;
+  }
+}
+
+/* for all ducument */
+body {
+  background-image: url("../img/1\(1\).jpg");
+  direction: rtl;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* all my form rejester */
+.main-sec {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.main-sec .main-div {
+  background-image: linear-gradient(90deg, #13477291, #af2c3da1);
+  border-radius: 27px 27px 37px 37px / 27px 27px 37px 37px;
+  box-shadow: inset 1px 1px 12px black;
+}
+.main-sec .main-div .main-form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.main-sec .main-div .main-form-input input {
+  margin: 15px;
+  outline-style: none;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  /* border: none; */
+  background: none;
+  /* border: 2px solid rgb(255, 255, 255); */
+}
+.jq-add-input1 {
+  border: 2px solid rgb(202, 15, 15);
+}
+.main-sec .main-div .main-form-input .showPass {
+  font-size: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* clsss */
+.main-sec .main-div .error {
+  margin: 10px;
+  padding: 10px;
+  color: rgb(242, 233, 235);
+  background-color: rgba(211, 37, 52, 0.685);
+  width: 90%;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 7.8px;
+  display: none;
+}
+
+/* id */
+/* .main-sec .main-div .error {
+  margin: 10px;
+  padding: 10px;
+  color: rgb(230, 24, 62);
+  background-color: rgba(211, 37, 52, 0.685);*
+  width: 85%;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 10px;
+  display: none;*
+} */
+
+.error-blue {
+  margin: 10px;
+  padding: 10px;
+  color: rgb(242, 233, 235);
+  background-color: rgba(37, 164, 211, 0.685);
+  width: 90%;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 10px;
+  display: none;
+}
+
+.main-sec .main-div .sends {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.main-sec .main-div .sends:hover::before {
+  content: attr(alt);
+  background-color: rgba(41, 61, 117, 0.589);
+  position: absolute;
+  top: -0px;
+  left: -120px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 1s;
+}
+.main-sec .main-div .sends input {
+  outline-style: none;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: none;
+  position: relative;
+}
+
+.main-sec .main-div .sends input:nth-child(1) {
+  border: 2px solid #26721391;
+  background-color: #76e45b91;
+}
+
+.main-sec .main-div .sends input:nth-child(2) {
+  border: 2px solid #2f84c991;
+  background-color: #61b4f891;
+}
+
+.main-sec .main-div .see-information {
+  color: rgb(151, 144, 231);
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 1s;
+}
+.main-sec .main-div .see-information:hover {
+  color: rgb(75, 64, 192);
+  font-weight: 900;
+  transition: all 1s;
+}
+
+.main-sec .main-div .if-you-dont-have .do-you-have {
+  border-top: 1px solid rgba(225, 255, 255, 0.8);
+  font-size: 0.8em;
+  color: white;
+}
+.main-sec .main-div .if-you-dont-have .do-you-have a {
+  color: rgb(236, 91, 91);
+  font-family: ziba;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider div {
+            width: 20%;
+            display: inline-block;
+        }
+
+        #slider div img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="slider">
+        <img src="./img/1.gif" id="img1" alt="">
+   
+        <img src="./img/2.jpg" id="img2" alt="">
+
+        <img src="./img/3.jpg" id="im3" alt="">
+    
+        <img src="./img/4.jpg" id="im4" alt="">
+    </div> -->
+    <button onclick="create()">ایجاد تصویر</button>
+    <div id="slider">
+
+    </div>
+
+    <!-- <img src="./img/1.gif" id="slider" alt=""> -->
+    <script src="../../8/home/js/jquery-3.6.0.min.js"></script>
+    <script>
+        function create() {
+            var imgs = ['./img/1.gif', './img/2.jpg', './img/3.jpg', './img/4.jpg']
+            for (i = 0; i <= 3; i++) {
+                // $('#slider').append(`
+                // <div>
+                //    <img src="${imgs[i]}">
+                // </div>
+                // `);
+                document.getElementById('slider').innerHTML += `<div>
+                   <img src="${imgs[i]}">
+                </div>`
+            }
+        }
+    </script>
+</body>
+
+</html>
