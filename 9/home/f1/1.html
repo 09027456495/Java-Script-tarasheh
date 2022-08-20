@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>slider</title>
+    <style>
+        #container {
+            width: 100%;
+
+        }
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+<img src="../img/2.jpg" alt="">
+    <script>
+
+        let images = new Array('../img/2.jpg', '../img/3.jpg','../img/4.jpg');
+        for (let i = 0; i <= images.length - 1; i++) {
+
+            container.innerHTML += `
+                <div id="img_${i}" class="image-container">
+                <img src="${images[i]}" />
+                </div>`
+        }
+        document.getElementById('img_0').style.display = 'block'
+        let x = 0;
+        setInterval(() => {
+            x = x + 1
+            for (let i = 0; i < images.length; i++) {
+                if (x == i) {
+                    document.getElementById(`img_${i}`).style.display = 'block'
+                } else {
+                    document.getElementById(`img_${i}`).style.display = 'none'
+                }
+            }
+            if (x >= images.length - 1) {
+                x = -1
+            }
+        }, 1000)
+    </script>
+</body>
+
+
+</html>

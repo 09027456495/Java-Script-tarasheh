@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        #container {
+            width: 100%;
+
+        }
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+
+
+    <script>
+        
+        var images = new Array('./Teif Sakht Afzar (86).jpg', './Teif Sakht Afzar (27).jpg',
+            './financial-management-in-the-sports-industry.jpg', './Teif Sakht Afzar (27).jpg');
+        for (var i = 0; i <= images.length - 1; i++) {
+
+            container.innerHTML += `<div id="img_${i}" class="image-container">
+                <img src="${images[i]}" />
+                </div>`
+
+
+            // if(i == 0){
+            //     // container.children[0].style.display = 'block'
+            // }
+        }
+        document.getElementById('img_0').style.display = 'block'
+        var x = 0;
+        setInterval(()=>{
+            x = x + 1
+            for (var i = 0; i < images.length; i++) {
+                document.getElementById(`img_${i}`).style.display = 'none'
+                if(x == i){
+                    document.getElementById(`img_${i}`).style.display = 'block'
+                }
+            }
+            if(x >= images.length-1){
+                        x = -1
+                    }
+        },1000)
+    </script>
+</body>
+
+
+</html>
