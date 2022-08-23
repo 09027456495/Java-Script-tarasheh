@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>ten</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .show_city {
+            background-color: rgba(43, 41, 38, 0.712);
+            color: aliceblue;
+            border-radius: 12px;
+            margin: 20px;
+            padding: 30px;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+    <script src="../../8/home/js/jquery-3.6.0.min.js"></script>
+    <script>
+        var city = ['Qom', 'Mashhad', 'Tehran', 'Hamedan'];
+
+        city.forEach(test)
+        function test(item, index) {
+            console.log(item)
+            console.log(index)
+            $('.container').append(`<div class="show_city">${index} - ${item}</div>`)
+        }
+
+
+        // /**/ example is here
+        // city.forEach( /*function*/ (/*item, index*/) => {
+        // city.forEach(() => {
+        //     console.log(item)
+        //     console.log(index)
+
+        //     $('.container').append(`<div class="show_city">${index} - ${item}</div>`)
+
+        // })
+
+    </script>
+</body>
+
+</html>

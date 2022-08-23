@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .star{
+            color: rgba(43, 45, 46, 0.507);
+        }
+        .star:hover {
+            color: orange;
+            cursor: pointer;
+        }
+
+        .checked {
+            color: orange;
+        }
+        .UnChecked{
+            color:  rgba(43, 45, 46, 0.507);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Star Rating</h2>
+    <span class="fa fa-star star checked " onclick="change()"></span>
+    <span class="fa fa-star star" onclick="change()"></span>
+    <span class="fa fa-star star" onclick="change()"></span>
+    <span class="fa fa-star star" onclick="change()"></span>
+    <span class="fa fa-star star" onclick="change()"></span>
+
+    <script src="../../8/home/js/jquery-3.6.0.min.js"></script>
+    <script>
+        var color = $('.star')
+        // console.log(color);
+        var add_color = [ color ];
+        // console.log(add_color.length);
+      
+
+        add_color.forEach(test)
+        function test(item, index) {
+
+            // console.log(item)
+            console.log(index)
+            
+            function change(){
+                $('.star').append(item)
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

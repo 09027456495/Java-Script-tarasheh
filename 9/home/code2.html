@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>slider</title>
+    <style>
+
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="bg-success w-100"></div>
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+
+     
+
+
+
+        // i have 3 SRC in Array , but i want use this img in slider
+        let images = new Array('./img/2.jpg', './img/3.jpg', './img/4.jpg');
+
+
+        // frist we show the in ducoment and after that ..........
+        // in this loop we want Increase value src . now go see levels
+
+        // 1 : frist we have zero value
+        // 2 : now in this section there are conditions , i is 0 so if images array was greater equal images.length 
+        // 3 : Increase i or our value
+        for (let i = 0; i <= images.length; i++) {
+
+            // $('#container').append(`
+            // <div>
+            //    <img src="${imgs[i]}">
+            // </div>
+            // `);  
+
+            // now use the ID and show it
+            // in down code , has ID , we said use number i 
+            container.innerHTML += `
+                <div  id="img_${i}" class="image-container">
+                <img  src="${images[i]}" />
+                </div>`
+        }
+        // here ew saed img_0 and in loop it rotates 
+        // 'img_1'
+        // 'img_2'
+        // 'img_3'
+        document.getElementById('img_0').style.display = 'block'
+
+
+        let x = 0;
+        setInterval(() => {
+            x = x + 1
+            for (let i = 0; i < images.length; i++) {
+                if (x == i) {
+                    document.getElementById(`img_${i}`).style.display = 'block'
+                } else {
+                    document.getElementById(`img_${i}`).style.display = 'none'
+                }
+            }
+            // it goes back again value
+            if (x >= images.length - 1) {
+                x = -1
+            }
+        }, 2000)
+    </script>
+</body>
+
+
+</html>
