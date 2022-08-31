@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <title>star</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background: linear-gradient(45deg, rgb(190, 128, 48), rgb(172, 26, 152));
+    }
+
+    .rating_heading {
+        color: antiquewhite;
+
+    }
+
+    .star_rating {
+        user-select: none;
+        background-color: aliceblue;
+        padding: 1.4rem 2.5rem;
+        margin: 2rem;
+        border-radius: .4rem;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .star {
+        font-size: 3rem;
+        color: #ff9800;
+        background-color: unset;
+        border: none;
+    }
+
+    .star:hover {
+        cursor: pointer;
+    }
+
+    .active {
+        color: #ff9800;
+    }
+</style>
+
+<body>
+    <h1 class="rating_heading">ستاره امتیازات</h1>
+    <p>امتیاز شما چه قدر است؟</p>
+    <div class="star_rating">
+        <button class="star">&#9734;</button>
+        <button class="star">&#9734;</button>
+        <button class="star">&#9734;</button>
+        <button class="star">&#9734;</button>
+        <button class="star">&#9734;</button>
+    </div>
+    <p class="current_rating">0 of 5</p>
+    <script src="../../8/home/js/jquery-3.6.0.min.js"></script>
+    <script>
+        // const allStars = $('.star');
+
+        // for stars
+        // querySelectorAll
+        // https://free-learn.ir/%d9%85%d8%aa%d8%af-queryselectorall-%d8%af%d8%b1-dom-%d8%ac%d8%a7%d9%88%d8%a7%d8%a7%d8%b3%da%a9%d8%b1%db%8c%d9%be%d8%aa/
+
+        // querySelector
+        // https://free-learn.ir/%D9%85%D8%AA%D8%AF-queryselector-%D8%AF%D8%B1-dom-%D8%AC%D8%A7%D9%88%D8%A7%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/
+        const allStars = document.querySelectorAll('.star')
+        // console.log(allStars)
+
+        // for current
+        let current_rating = document.querySelector('.current_rating');
+
+        allStars.forEach((star, i) => {
+
+
+            // var index_star1 = i + 1;
+            // console.log(index_star1);
+            // console.log($(star))
+            $(star).hover(function() {
+                $(this).html('&#9733')
+                $(this).prevAll().html('&#9733')
+                $(this).nextAll().html('&#9734')
+            })
+
+            star.onclick = function () {
+                // console.log(star);
+                // console.log(i);
+
+                // console.log(i + 1); // 1 || 2 || 3 || 4 || 5 => when we onClick on stars
+                var index_star = i + 1;
+                // console.log(index_star);
+
+
+                // for current
+                current_rating.innerHTML = `${index_star} of 5 `
+
+                allStars.forEach((star, j) => {
+                    // console.log(j + 1 )
+
+                    // console.log(star);
+                    // console.log(j);
+
+                    // index_star > j || index_star >= j + 1
+                    if (index_star >= j + 1) { // 5 >= 1 && 2 && 3 && 4 && 5    =>    5 >= j+5
+                        star.innerHTML = '&#9733'
+                    } else {
+                        star.innerHTML = '&#9734'
+                    }
+                })
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

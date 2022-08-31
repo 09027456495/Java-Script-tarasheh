@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #4cafafe7;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.233);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <button data="1" class="item" onclick="change_url1(event)">پزشکی</button>
+        <button data="2" class="item" onclick="change_url2(event)">مهندسی</button>
+        <button data="3" class="item" onclick="change_url3(event)">هنر</button>
+        <button data="4" class="item" onclick="change_url4(event)">ورزش</button>
+    </div>
+
+
+    <br>
+    <hr>
+
+    <div>
+        <button onclick="change_url_remove1(event)">پاک کردن پزشکی</button>
+        <button onclick="change_url_remove2(event)">پاک کردن مهندسی</button>
+        <button onclick="change_url_remove3(event)">پاک کردن هنر</button>
+        <button onclick="change_url_remove4(event)">پاک کردن ورزش</button>
+    </div>
+
+
+    <br>
+    <hr>
+
+    <center><input onclick="history.back()" type="button" value="◄ Go Back" /></center>
+
+    <script>
+
+        // Arrays
+        var mainAllItem = ['پزشکی', 'مهندسی', 'هنر', 'ورزش']
+        console.log(mainAllItem[0]);
+        console.log(mainAllItem[1]);
+        console.log(mainAllItem[2]);
+        console.log(mainAllItem[3]);
+
+        var mainAllItemO = {
+            one: 'پزشکی',
+            two: 'مهندسی',
+            three: 'هنر',
+            four: 'ورزش',
+        }
+
+
+        function change_url1(e) {
+            var url = window.location;
+            window.location = url + '?caregory1=' + mainAllItemO.one;
+            // console.log(e)
+        }
+        function change_url2(e) {
+            var url = window.location;
+            window.location = url + '?caregory1=' + mainAllItem[1];
+            // console.log(e)
+        } function change_url3(e) {
+            var url = window.location;
+            window.location = url + '?caregory1=' + mainAllItem[2];
+            // console.log(e)
+        } function change_url4(e) {
+            var url = window.location;
+            window.location = url + '?caregory1=' + mainAllItem[3];
+            // console.log(e)
+        }
+
+        function change_url_remove1(ev) {
+            // location.reload();
+            // mainAllItem[0] = window.location.href
+            // window.location.replace('file:///C:/Users/Amir/Desktop/Java-Script-tarasheh/12/class/index2.html' );
+            // console.log(ev);
+
+            // delete  mainAllItem[0] ;
+
+            // history.back()
+            history.go(-1)
+
+        }
+
+
+        var jobs = ['پزشکی', 'مهندسی', 'هنر', 'ورزش'];
+
+        // حذف پزشکی و مهندسی
+        delete jobs[0];
+        delete jobs[1];
+
+        document.write(jobs);
+
+
+    </script>
+</body>
+
+</html>

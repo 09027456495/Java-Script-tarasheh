@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button onclick="change_url(event)" >پزشکی</button>
+
+<script>
+    function change_url(e) {
+        var url = window.location.href
+        window.location.href = url + '?caregory1=' + e.target.textContent
+        console.log(e.target.textContent)
+    }
+
+</script>
+<script>
+    // var x = 'hello evrybody'
+
+
+    
+    // console.log(x.length);
+
+// var z ="wellcom admin "
+
+// z.replace('admin','mamad')
+
+// alert(z.replace('admin','mamad'))
+
+
+// var c = "hello evry body ";
+
+// alert(c.slice(6, 12))
+
+// var v ="hello evry body"
+
+// alert(v.substr(6,5))
+
+// var b = "hello evry body "
+// // b.toleLowerCase()
+// alert(b.toUpperCase()) 
+
+// var n = "hello evry body";
+
+// alert(n.indexOf('b'))
+
+// var m = "           hello       evry body "
+// alert(m.trim().replace('      ', ''))
+
+var a = "www."
+
+</script>
+</body>
+</html>

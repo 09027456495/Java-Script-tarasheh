@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // we can find the length var
+        var x = "hello       every    body"
+        console.log(x.length);
+
+        var y = "wellCome admin"
+        console.log(y);
+        console.log(y.replace("admin","user"));
+        console.log(y.replace( /Admin/i , "user"));
+
+        var o = "hello every body"
+        console.log(o.slice(6,11)) //
+
+        console.log(o.substr(6,6)) // 
+
+        console.log(o.toLowerCase()) // short
+        console.log(o.toUpperCase()) // big
+
+        console.log(o.indexOf('z'))
+        console.log(o.indexOf('b'))
+
+        console.log(o.lastIndexOf('b'))
+        
+        console.log(o.search('b'))
+
+        console.log(o.trim());
+
+
+    </script>
+</body>
+</html>

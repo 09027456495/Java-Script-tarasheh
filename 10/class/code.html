@@ -32,23 +32,23 @@
     <script>
         var city = ['Qom', 'Mashhad', 'Tehran', 'Hamedan'];
 
-        city.forEach(test)
-        function test(item, index) {
-            console.log(item)
-            console.log(index)
-            $('.container').append(`<div class="show_city">${index} - ${item}</div>`)
-        }
+        // city.forEach(test)
+        // function test(item, index) {
+        //     console.log(item)
+        //     console.log(index)
+        //     $('.container').append(`<div class="show_city">${index} - ${item}</div>`)
+        // }
 
 
         // /**/ example is here
         // city.forEach( /*function*/ (/*item, index*/) => {
-        // city.forEach(() => {
-        //     console.log(item)
-        //     console.log(index)
+        city.forEach( item => {
+            console.log(item)
+          
 
-        //     $('.container').append(`<div class="show_city">${index} - ${item}</div>`)
+            $('.container').append(`<div class="show_city">${item}</div>`)
 
-        // })
+        })
 
     </script>
 </body>
