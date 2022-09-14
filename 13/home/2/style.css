@@ -1,0 +1,80 @@
+/* ***** start the styles ***** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ینی مارجین و پدینگ بزرگ تر از اون چیزی که میدیم نباشه */
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.All_Calc .calcualtor {
+  width: 500px;
+  background-color: rgba(67, 84, 110, 0.534);
+  margin: 0 auto;
+  box-shadow: 1px 1px 4px 12px rgba(0, 0, 0, 0.274);
+  border-radius: 10px;
+  transform: translate(0, 30%);
+  padding: 10px;
+  overflow: hidden;
+  /* باعث میشه که محتوا که به بیرون رفتند به داخل اینجا بیایند */
+}
+.All_Calc .calcualtor .write_Num {
+  display: flex;
+  justify-content: center;
+}
+.All_Calc .calcualtor .write_Num input {
+  background-color: rgba(167, 163, 157, 0.418);
+  width: 470px;
+  height: 50px;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 7px 9px rgba(77, 76, 76, 0.164);
+  border: none;
+  outline-style: none;
+  padding: 4px;
+  color: rgb(51, 49, 49);
+}
+
+.All_Calc .calcualtor .btn {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.411);
+  text-align: center;
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+  float: left;
+  /* باعث میشه که کنار هم قرار بگیره */
+  width: 23.5%;
+  height: 65px;
+  padding: 10px 5px;
+  /* ینی کل صفه ویتش صد درصده و ما میگیم یک چهارم اون باشه */
+  margin: 2px;
+  box-shadow: 1px 1px 2px black;
+  font-size: 1.3em;
+  transition: 100ms;
+
+  cursor: pointer;
+  /* حالت دستی که بر روی موس میاد در هنگامی که می خاهییم کلیک کنیم */
+
+  user-select: none;
+  /* باعث میشه که دیگه اون عدد سلکت نشه */
+
+
+}
+
+/* ینی همون که موس بره روش یه رنگ و یه حالت دیگه ایجاد بشه */
+.All_Calc .calcualtor .btn:hover {
+  background-color: rgb(43, 48, 53);
+  transition: 100ms;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.466);
+}
+
+/* ینی وقتی کلیک شد حالت دکمه ایجاد بشه */
+.All_Calc .calcualtor .btn:active {
+  /* اینست داخل اون المنت رو شدو میده  */
+  box-shadow: 1px 1px 5px #000 inset;
+  padding: 9px;
+}

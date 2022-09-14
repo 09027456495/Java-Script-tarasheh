@@ -71,7 +71,8 @@
 
         function change_url1(e) {
             var url = window.location;
-            window.location = url + '?caregory1=' + mainAllItemO.one;
+            // window.location = url + '?caregory1=' + mainAllItemO.one;
+            window.location = url + '?caregory1=' + mainAllItem[0];
             // console.log(e)
         }
         function change_url2(e) {
@@ -97,7 +98,15 @@
             // delete  mainAllItem[0] ;
 
             // history.back()
-            history.go(-1)
+            // history.go(-1)
+
+
+            var url = window.location;
+            window.location = url + delete mainAllItem[0];
+
+            console.log(url);
+            console.log(window.location);
+            console.log(delete mainAllItem[0]);
 
         }
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../9/home/css/bootstrap.min.css">
+    <script src="../../9/home/js/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        button {
+            background-color: #4cafafe7;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.233);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <label for="checkbox1">پزشکی</label>
+        <input onclick="change_url(event)" id="checkbox1" value="medical" type="checkbox" required autofocus checked>
+        <br>
+        <label for="checkbox2">مهندسی</label>
+        <input onclick="change_url(event)" id="checkbox2" value="Engineering" type="checkbox" required>
+        <br>
+        <label for="checkbox3">تربیت بدنی</label>
+        <input onclick="change_url(event)" id="checkbox3" value="Sport" type="checkbox" required>
+        <br>
+        <label for="checkbox4">کامپیوتر</label>
+        <input onclick="change_url(event)" id="checkbox4" value="Computer" type="checkbox" required>
+        <br>
+    </div>
+
+    <div class="alert alert-info">
+        <ul>
+
+        </ul>
+    </div>
+
+    <script>
+        var params = window.location.search
+        params = params.replace('?', '');
+        params = params.split('&');
+
+        for (let i = 0; i < params.length; i++) {
+            newParams = params[i].split('=');
+            if (newParams[1] != undefined) {
+                console.log(newParams[1]);
+                $('.alert ul').append(`
+                <li class="d-inline-block p-1 bg-primary mx-2 mt-2 rounded text-white">
+                    <span class="bg-danger text-dark" onclick="remove(event)" style="cursor: pointer">X</span>
+                        ${newParams[1]}
+                </li>
+                `)
+            }
+
+        }
+
+        function change_url(e) {
+            var url = window.location.href
+
+            var element = $(e.target.value);
+            console.log(e.target.value);
+
+            var param = 'category=' + element
+
+
+            window.location.href += param;
+        }
+
+        function remove(e) {
+            $(e.target).parent().remove()
+
+            for (let i = 0; i < params.length; i++) {
+                newParams = params[i].split('=');
+            }
+            window.location.href = '?' + params.join(' ');
+        }
+    </script>
+
+</body>
+
+</html>
